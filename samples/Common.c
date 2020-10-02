@@ -410,10 +410,8 @@ STATUS createSampleStreamingSession(PSampleConfiguration pSampleConfiguration, P
     audioTrack.codec = RTC_CODEC_OPUS;
     STRCPY(audioTrack.streamId, "myKvsVideoStream");
     STRCPY(audioTrack.trackId, "myAudioTrack");
-    RtcRtpTransceiverInit rtcRtpTransceiverInit;
-    rtcRtpTransceiverInit.direction = RTC_RTP_TRANSCEIVER_DIRECTION_SENDONLY;
     CHK_STATUS(addTransceiver(pSampleStreamingSession->pPeerConnection,
-                              &audioTrack,
+                              NULL,
                               &rtcRtpTransceiverInit,
                               &pSampleStreamingSession->pAudioRtcRtpTransceiver));
 

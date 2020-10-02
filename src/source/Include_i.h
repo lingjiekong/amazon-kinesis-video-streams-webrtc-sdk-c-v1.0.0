@@ -19,7 +19,7 @@ struct __SocketConnection;
 ////////////////////////////////////////////////////
 // Project include files
 ////////////////////////////////////////////////////
-#include <com/amazonaws/kinesis/video/webrtcclient/Include.h>
+#include <webrtc/com/amazonaws/kinesis/video/webrtcclient/Include.h>
 
 #include <jsmn.h>
 #include <openssl/bio.h>
