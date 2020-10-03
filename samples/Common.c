@@ -411,8 +411,8 @@ STATUS createSampleStreamingSession(PSampleConfiguration pSampleConfiguration, P
     STRCPY(audioTrack.streamId, "myKvsVideoStream");
     STRCPY(audioTrack.trackId, "myAudioTrack");
     CHK_STATUS(addTransceiver(pSampleStreamingSession->pPeerConnection,
+                              &audioTrack,
                               NULL,
-                              &rtcRtpTransceiverInit,
                               &pSampleStreamingSession->pAudioRtcRtpTransceiver));
 
     CHK_STATUS(transceiverOnBandwidthEstimation(pSampleStreamingSession->pAudioRtcRtpTransceiver,
